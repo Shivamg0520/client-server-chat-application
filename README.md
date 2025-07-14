@@ -1,35 +1,51 @@
-# Simple Server-Client Chat Application
 
-This is a basic command-line chat application built with Python's `socket` module, demonstrating a simple client-server communication model.
+# Python Socket Chat Application
 
-## Features
+This is a simple client-server chat application built using Python’s `socket` library. It demonstrates basic socket programming concepts by allowing two-way communication between a server and a client over TCP.
 
-* **Real-time Messaging**: Exchange messages instantly between the server and a single client.
-* **Command-Line Interface**: Interact with the chat through your terminal.
-* **Basic Socket Communication**: Utilizes Python's built-in `socket` library for network communication.
+## 📂 Project Structure
 
-## How it Works
+- `server.py`: Runs the server that waits for client connections and enables message exchange.
+- `client.py`: Connects to the server and allows the user to chat interactively.
 
-The application consists of two main components:
+## 🚀 Features
 
-1.  **Server (`server.py`)**:
-    * Listens for incoming connections on a specified port.
-    * Accepts one client connection at a time.
-    * Sends messages to the connected client and receives messages from it.
-2.  **Client (`client.py`)**:
-    * Connects to the server's hostname and port.
-    * Sends messages to the server and receives messages from it.
+- Simple TCP socket communication.
+- Real-time bidirectional messaging between server and client.
+- Runs on localhost using the host’s network name and port `12345`.
 
-## Prerequisites
+## 🛠️ Requirements
 
-* Python 3.x installed on both the server and client machines.
+- Python 3.x
 
-## Setup and Usage
+## ▶️ How to Run
 
-Follow these steps to get the chat application running:
+1. **Clone the repository**
+   ```bash
+   git clone <your-repo-url>
+   cd <your-repo-folder>
+   ```
 
-### 1. Clone the Repository (or download the files)
+2. **Run the server**
+   Open a terminal and start the server:
+   ```bash
+   python server.py
+   ```
 
-```bash
-git clone https://github.com/Shivamg0520/client-server-chat-application.git
-cd client-server-chat-appplication
+3. **Run the client**
+   Open another terminal (or run on a different machine in the same network) and start the client:
+   ```bash
+   python client.py
+   ```
+
+4. **Start chatting!**
+   - Server and client can send messages to each other interactively.
+
+## 📌 Notes
+
+- Both scripts use `socket.gethostname()` which works on localhost. For remote connections, replace `HOST_NAME` with the server’s IP address.
+- Only **one client** can connect at a time in this simple version.
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
