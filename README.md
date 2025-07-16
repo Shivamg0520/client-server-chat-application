@@ -1,4 +1,3 @@
-
 # Python Socket Chat Application
 
 This is a simple client-server chat application built using Python’s `socket` library. It demonstrates basic socket programming concepts by allowing two-way communication between a server and a client over TCP.
